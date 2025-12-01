@@ -1,4 +1,4 @@
-let score = "44dfd"
+ let score = "44dfd"
 
 console.log (typeof score);
 console.log (typeof (score));

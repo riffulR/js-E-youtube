@@ -29,8 +29,17 @@ const newstringOne =("  rahu   ");
 // console.log(newstringOne.trim());
 
 const url = "https:/rahulch.com/rahul%20chaudhary";
-console.log(url.replace('%20', " "));
+// console.log(url.replace('%20', " "));
 
+const namee = 'rifful rajput'
 
+// const reverseName =  namee.length
+// console.log(reverseName);
+console.log();
+let reversedName = ''
+for(var i = namee.length-1; i>-1;--i){
+    // console.log(namee[i])
+    reversedName +=namee[i]
 
-
+}
+console.log(reversedName)

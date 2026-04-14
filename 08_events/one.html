@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html Events</title>
+    
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing Image</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="candle" src="https://plus.unsplash.com/premium_photo-1737119503128-8120c87383a5?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8" alt="photoshop"> </li>
+         
+            <li><img width="200px" id="flower" src="https://images.pexels.com/photos/35667495/pexels-photo-35667495.jpeg" alt=""> </li>
+
+            <li><img width="200px" id="forest" src="https://images.pexels.com/photos/35515894/pexels-photo-35515894.jpeg" alt="" onclick="alert('forest')">  </li>
+
+            <li><img width="200px" id="snow" src="https://images.pexels.com/photos/30688445/pexels-photo-30688445.jpeg" alt=""> </li>
+
+           <li><a style="color: aliceblue;" href="https://www.google.com/" id="google">Google</a></li>
+                           
+        </ul>
+    </div>
+  
+</body>
+<script>
+//    document.getElementById('snow').onclick = function(){
+//         alert('snow')
+//     }
+//     document.getElementById('candle').addEventListener ('click', function(){
+//         alert('candle')
+//     })
+//     document.getElementById('images').addEventListener ('click', function(e){
+//         console.log('click inside the ul');
+//     }, false)
+//     document.getElementById('flower').addEventListener ('click', function(e){
+//         console.log('flower');
+//          e.stopPropagation()
+//     }, false)
+
+//     document.getElementById('google').addEventListener('click', function (e) {
+//         e.preventDefault()
+//         e.stopPropagation()
+//         console.log("Google");
+        
+        
+//     }, false)
+
+document.querySelector('#images').addEventListener('click', function(e){
+    console.log(e.target.parentNode);
+    if (e.target.tagName === 'IMG') {
+       let removeIt = e.target.parentNode
+       removeIt.remove()
+        
+    }
+    
+    // removeIt.parentNode.removeChild(removeIt)
+})
+
+
+</script>
+
+</html>
